@@ -121,7 +121,7 @@ main {
 .ctaBtn:hover { background: #dc7a2a; transform: translateY(-2px); }
 .projetContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -137,8 +137,17 @@ main {
   transform: translateY(-6px);
   box-shadow: 0 16px 32px rgba(15, 18, 47, 0.16);
 }
-.cardProjet img { width: 100%; height: 190px; object-fit: cover; }
-.cardProjet p { padding: 0.95rem 0.95rem 0.2rem; color: var(--muted); }
+.cardProjet img { width: 100%; height: 120px; object-fit: cover; }
+.cardProjet p { padding: 0.95rem 0.95rem 0.2rem; color: var(--muted); text-align: center; }
+.btn a {
+  text-decoration: none;
+  color: #fff;
+}
+.cardProjet h3 {
+  text-align: center;
+  color: var(--primary);
+  padding: 0.75rem 0.95rem 0.2rem;
+}
 .btnContainer {
   display: flex;
   justify-content: center;
