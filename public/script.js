@@ -29,11 +29,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Mobile Menu (prep)
-const navbar = document.querySelector('.navbar');
-if (window.innerWidth <= 768) {
-  // Add hamburger logic here if needed
+function toggleMenu() {
+  const navbar = document.getElementById('navbar');
+  navbar.classList.toggle('active');
 }
+
+// Close menu on link click
+document.querySelectorAll('.navbar a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('navbar').classList.remove('active');
+  });
+});
+
+// Close on resize desktop
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    document.getElementById('navbar').classList.remove('active');
+  }
+});
 
 // Project Modals
 const modals = {};
