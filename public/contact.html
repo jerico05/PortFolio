@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1f71">
     <link rel="stylesheet" href="styles.css">
-    <title>JericoFolio-Contact</title>
+    <title>JericoFolio - Contact</title>
 </head>
 <body>
     <header class="site-header">
@@ -14,36 +15,45 @@
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="projet.html">Projets</a></li>
-                    <li><a href="about.html">A propos de moi</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    
     <main>
-    <section>
-         <div class="titreContainer">
-            <h1>Contact</h1>
-         </div>
-        <div class="formContainer">
-            <form id="contactForm">
-                <label for="name">Nom et Prénoms</label>
-                <input type="text" name="name" id="name" required>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
-                <label for="title">Sujet</label>
-                <input type="title" name="title" id="title" required>
-                <label for="message">Message</label>
-                <textarea name="message" id="message" required></textarea>
-                <button type="submit" class="submitBtn">Envoyer</button>
-            </form>
-        </div>
-    </section>
+        <section class="fade-in">
+            <div class="titreContainer">
+                <h1>Contactez-moi</h1>
+                <p>Prêt à discuter de votre projet ? Envoyez-moi un message !</p>
+            </div>
+            
+            <div class="formContainer">
+                <form id="contactForm">
+                    <label for="name">Nom Complet</label>
+                    <input type="text" name="name" id="name" placeholder="Votre nom..." required>
+                    
+                    <label for="email">Adresse Email</label>
+                    <input type="email" name="email" id="email" placeholder="votre@email.com" required>
+                    
+                    <label for="title">Sujet</label>
+                    <input type="text" name="title" id="title" placeholder="Objet de votre message..." required>
+                    
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Dites-moi tout sur votre projet..." required></textarea>
+                    
+                    <button type="submit" class="submitBtn ctaBtn">Envoyer le Message</button>
+                </form>
+            </div>
+        </section>
     </main>
+    
     <footer>
-        <p>© 2026 JericoFolio — Tous droits réservés.</p>
+        <p>© 2024 JericoFolio — Tous droits réservés. Disponible pour collaborations.</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

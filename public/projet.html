@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1f71">
     <link rel="stylesheet" href="styles.css">
-    <title>JericoFolio-Projets</title>
+    <title>JericoFolio - Projets</title>
 </head>
 <body>
     <header class="site-header">
@@ -13,60 +14,88 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
-                    <li><a href="projet.html">Projets</a></li>
-                    <li><a href="about.html">A propos de moi</a></li>
+                    <li><a href="projet.html" class="active">Projets</a></li>
+                    <li><a href="about.html">À propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    
     <main>
-        <div class="titreContainer">
-            <h1>Mes projets</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nemo impedit iste excepturi minus, sit dolore doloremque non quaerat natus.</p>
+        <div class="titreContainer fade-in">
+            <h1>Mes Projets</h1>
+            <p>Découvrez mes réalisations les plus récentes. Chaque projet représente des heures de code, de design et d'optimisation.</p>
         </div>
+        
+        <!-- Filter Buttons (futur JS) -->
+        <div class="filters fade-in" style="text-align:center; margin-bottom:2rem;">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+        </div>
+        
         <div class="projetContainer">
-            <div class="cardProjet">
-                <img src="assets/images/mbm.png" alt="mbm">
+            <div class="cardProjet fade-in" data-category="web">
+                <img src="assets/images/mbm.png" alt="Miabe Budget Manager" loading="lazy">
                 <h3>Miabe Budget Manager</h3>
-                <p>Application web pour la suivie des dépenses et revenus</p>
+                <p>Application web complète pour le suivi budgétaire. Gestion des dépenses, revenus, catégories et rapports visuels.</p>
+                <div class="tech-tags">
+                    <span>HTML/CSS/JS</span><span>FireBase</span>
+                </div>
                 <div class="btnContainer">
                     <button class="btn" data-action="preview">Aperçu</button>
-                    <button class="btn" data-action="source"><a href="https://github.com/GK330/Miabe-Budget-Manager.git">Code source</a></button>
+                    <button class="btn"><a href="https://github.com/GK330/Miabe-Budget-Manager.git" target="_blank">Code Source</a></button>
                 </div>
             </div>
-        <div class="cardProjet">
-            <img src="assets/images/metoe.png" alt="Projet 2">
-            <h3>Weather App</h3>
-            <p>Application web météo</p>
-            <div class="btnContainer">
-                <button class="btn" data-action="preview">Aperçu</button>
-                <button class="btn" data-action="source"><a href="https://github.com/jerico05/Weather-app.git">Code source</a></button>
+            
+            <div class="cardProjet fade-in" data-category="web">
+                <img src="assets/images/metoe.png" alt="Weather App" loading="lazy">
+                <h3>Weather App</h3>
+                <p>Application météo temps réel avec géolocalisation, prévisions 7 jours et interface responsive.</p>
+                <div class="tech-tags">
+                    <span>React JS</span><span>API OpenWeather</span><span>CSS</span>
+                </div>
+                <div class="btnContainer">
+                    <button class="btn" data-action="preview">Aperçu</button>
+                    <button class="btn"><a href="https://github.com/jerico05/Weather-app.git" target="_blank">Code Source</a></button>
+                </div>
+            </div>
+            
+            <div class="cardProjet fade-in" data-category="web">
+                <img src="assets/images/todolist.png" alt="To Do List" loading="lazy">
+                <h3>Smart To Do List</h3>
+                <p>Gestionnaire de tâches avancé avec drag & drop, catégories, recherche et persistance locale.</p>
+                <div class="tech-tags">
+                    <span>REACT JS</span>
+                </div>
+                <div class="btnContainer">
+                    <button class="btn" data-action="preview">Aperçu</button>
+                    <button class="btn"><a href="https://github.com/jerico05/TO-DO-LIST.git" target="_blank">Code Source</a></button>
+                </div>
+            </div>
+            
+            <div class="cardProjet fade-in" data-category="web">
+                <img src="assets/images/visuel.jpg" alt="Landing Page" loading="lazy">
+                <h3>Portfolio Landing</h3>
+                <p>Site vitrine moderne avec animations fluides, glassmorphism et design responsive multi-appareils.</p>
+                <div class="tech-tags">
+                    <span>HTML/CSS/JS</span><span>Glassmorphism</span><span>Animations</span>
+                </div>
+                <div class="btnContainer">
+                    <button class="btn" data-action="preview">Aperçu</button>
+                    <button class="btn"><a href="#" target="_blank">Code Source</a></button>
+                </div>
             </div>
         </div>
-        <div class="cardProjet">
-            <img src="assets/images/todolist.png" alt="Projet 3">
-            <h3>To Do List</h3>
-            <p>Mini application web pour gestion des tâches</p>
-            <div class="btnContainer">
-                <button class="btn" data-action="preview">Aperçu</button>
-                <button class="btn" data-action="source"><a href="https://github.com/jerico05/TO-DO-LIST.git">Code source</a></button>
-            </div>
-        </div>
-        <div class="cardProjet">
-            <img src="./assets/images/visuel.jpg" alt="Projet 4">
-            <h3>Projet 4</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <div class="btnContainer">
-                <button class="btn" data-action="preview">Aperçu</button>
-                <button class="btn" data-action="source"><a href="#">Code source</a></button>
-            </div>
-        </div>
-   </div>
     </main>
+    
     <footer>
-      <p>© 2026 JericoFolio — Tous droits réservés.</p>
+        <p>© 2024 JericoFolio — Tous droits réservés.</p>
     </footer>
+    
     <script src="script.js"></script>
-</body>
-</html>
+</xai:function_call > 
+
+<xai:function_call name="create_file">
+<parameter name="absolute_path">C:/Users/Hp/Documents/jerico/JericoFolio/public/styles.css
