@@ -18,7 +18,7 @@ const toggleTheme = () => {
 
 themeToggle.addEventListener('click', toggleTheme);
 
-const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+const savedTheme = localStorage.getItem('theme') || 'dark'; // Default black/dark
 setTheme(savedTheme);
 
 // Smooth Scroll

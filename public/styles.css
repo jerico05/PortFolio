@@ -2,42 +2,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
-  --primary: #1a1f71;
-  --primary-dark: #0f162d;
-  --accent: #f97316;
-  --accent-dark: #ea580c;
-  --bg: #f8fafc;
-  --bg-dark: #0f0f23;
-  --glass: rgba(255, 255, 255, 0.25);
-  --glass-dark: rgba(15, 15, 35, 0.4);
-  --text: #1f2a4a;
-  --text-dark: #e2e8f0;
-  --muted: #64748b;
-  --muted-dark: #94a3b8;
-  --border: rgba(148, 163, 184, 0.2);
-  --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  --shadow-dark: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  --primary: #111111;
+  --primary-dark: #222222;
+  --accent: #444444;
+  --bg: #0a0a0a;
+  --bg-dark: #000000;
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-dark: rgba(0, 0, 0, 0.8);
+  --text: #ffffff;
+  --text-dark: #ffffff;
+  --muted: #888888;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+  --shadow-dark: 0 35px 60px rgba(0, 0, 0, 1);
 }
 
 [data-theme="dark"] {
-  --bg: #0f0f23;
-  --bg-dark: #111127;
-  --glass: rgba(15, 15, 35, 0.4);
-  --text: #e2e8f0;
-  --text-dark: #f1f5f9;
-  --muted: #94a3b8;
-  --muted-dark: #cbd5e1;
-  --border: rgba(71, 85, 105, 0.3);
-  --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-  --shadow-dark: 0 35px 60px -12px rgba(0, 0, 0, 0.8);
-  --primary: #4f46e5;
-  --accent: #fb923c;
+  --bg: #0a0a0a;
+  --bg-dark: #000000;
+  --glass: rgba(0, 0, 0, 0.7);
+  --text: #f0f0f0;
+  --text-dark: #ffffff;
+  --muted: #808080;
+  --muted-dark: #b0b0b0;
+  --border: rgba(255, 255, 255, 0.05);
+  --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+  --shadow-dark: 0 40px 80px rgba(0, 0, 0, 1);
+  --primary: #000000;
+  --accent: #00d4ff;
+}
+
+[data-theme="light"] {
+  --bg: #1a1a1a;
+  --glass: rgba(255, 255, 255, 0.05);
+  --text: #d0d0d0;
 }
 
 body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.7;
-  background: linear-gradient(135deg, var(--bg) 0%, #e2e8f0 100%);
+  background: var(--bg-dark);
   color: var(--text);
   min-height: 100vh;
   overflow-x: hidden;
@@ -66,10 +70,7 @@ header.site-header {
 .logoContainer h1 {
   font-size: 1.8rem;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-dark);
   letter-spacing: -0.02em;
 }
 
@@ -97,7 +98,7 @@ header.site-header {
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
+  background: var(--text);
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -127,9 +128,7 @@ main {
 .titreContainer h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-dark);
   margin-bottom: 1rem;
   line-height: 1.1;
 }
@@ -148,7 +147,7 @@ main {
   border-radius: 24px;
   overflow: hidden;
   margin: 2rem 0;
-  background: linear-gradient(135deg, rgba(26, 31, 113, 0.8), rgba(249, 115, 22, 0.6)), 
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(10, 10, 10, 0.8)), 
               url('./assets/images/imageAccueil.jpg');
   background-size: cover;
   background-position: center;
@@ -198,9 +197,9 @@ main {
 
 /* CTA Button */
 .ctaBtn, .btn, .submitBtn {
-  background: linear-gradient(135deg, var(--accent), #fb923c);
-  color: white;
-  border: none;
+  background: var(--primary);
+  color: var(--text-dark);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1rem 2rem;
   font-size: 1.1rem;
@@ -209,7 +208,7 @@ main {
   position: relative;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
+  box-shadow: var(--shadow);
 }
 
 .ctaBtn a, .btn a {
@@ -331,9 +330,7 @@ main {
 
 .bio h1 {
   font-size: 2.5rem;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-dark);
   margin-bottom: 1rem;
 }
 
@@ -357,23 +354,25 @@ main {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--text-dark);
 }
 
 .skill-progress {
   height: 12px;
-  background: var(--border);
+  background: #333333;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .skill-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
+  background: #aeaeae;
   border-radius: 10px;
   width: 0%;
   transition: width 2s ease-in-out;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
 }
 
 /* Profile Cards */
@@ -390,7 +389,7 @@ main {
 }
 
 .cardAbout h3 {
-  color: var(--primary);
+  color:#ffffff;
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
@@ -452,12 +451,12 @@ main {
 .tech-tags span {
   background: var(--glass);
   backdrop-filter: blur(10px);
-  color: var(--accent);
+  color: var(--text);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid rgba(249, 115, 22, 0.2);
+  border: 1px solid var(--border);
 }
 
 .filters {
@@ -480,8 +479,8 @@ main {
 
 .filter-btn.active,
 .filter-btn:hover {
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  color: white;
+  background: var(--primary);
+  color: var(--text-dark);
   transform: translateY(-2px);
 }
 
@@ -489,6 +488,7 @@ main {
 .modal {
   animation: fadeIn 0.3s ease;
 }
+
 
 .modal-content {
   background: var(--glass);
@@ -533,12 +533,7 @@ main {
 }
 
 /* Gradient Text */
-.gradient-text {
-  background: linear-gradient(135deg, var(--accent), #fbbf24);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+
 
 /* Footer */
 footer {
