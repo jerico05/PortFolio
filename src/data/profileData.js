@@ -132,7 +132,7 @@ export const projects = [
     image: '/assets/images/eventhub.png',
     category: 'mobile',
     tech: ['React Native', 'Node.js', 'Firebase', 'Expo GO'],
-    github: 'https://github.com/jerico05',
+    github: 'https://github.com/TresorAlad/EventHub.git',
   },
   {
     id: 'techmentor',
@@ -142,7 +142,7 @@ export const projects = [
     category: 'web',
     tech: ['Next.js', 'Python', 'RAG', 'Docker'],
     demo: 'https://tech-mentor-ai.vercel.app/',
-    github: 'https://github.com/jerico05',
+    github: 'https://github.com/jerico05/TechMentor-AI.git',
   },
   {
     id: 'veloria',
@@ -160,7 +160,7 @@ export const projects = [
     image: '/assets/images/dashboard-agricole.png',
     category: 'web',
     tech: ['Python', 'React'],
-    github: 'https://github.com/jerico05',
+    github: 'https://github.com/jerico05/AgriInsight-Togo.git',
   },
   {
     id: 'mbm',
